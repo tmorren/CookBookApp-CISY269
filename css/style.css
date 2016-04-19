@@ -11,9 +11,10 @@
 		rgba(0, 0, 0, 0.5), 
 		rgba(0, 0, 0, 0.5) ), 
 		url("../img/login-page-bg.jpg");
+	color: white;
 }
 
 #sectionLoginForm{
 	position: relative;
-	top: 20%;
+	top: 15%;
 }

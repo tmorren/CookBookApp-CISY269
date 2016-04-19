@@ -15,36 +15,16 @@
 	<section id="pageLogin" data-role="page">	
 		<div class="ui-content" role="main" id="content">
 			<div id="sectionLoginForm">
-				<h1>RVCC Parking</h1>
+				<h1>CookBook</h1>
 
 				<label for="username">Username:</label>
 	        	<input type="text" name="username" id="username" class="ui-input-text">
 				<label for="password">Password:</label>
 	        	<input type="text" name="password" id="password" class="ui-input-text">
+	        	<a class="ui-btn" href="#pageMainMenu">Login</a>
         	</div>
 		</div>
 	</section>
-<!--
-	<section id="pageLogin" data-role="page">	
-		<div data-role="header" id="header"> 
-			<h2>CookBook</h2>
-		</div>
-		<div class="ui-content" role="main" id="content">
-			<div id="sectionLoginForm">
-				<h1>RVCC Parking</h1>
-
-				<label for="username">Username:</label>
-	        	<input type="text" name="username" id="username" class="ui-input-text">
-				<label for="password">Password:</label>
-	        	<input type="text" name="password" id="password" class="ui-input-text">
-        	</div>
-		</div>
-		<div data-role="footer" id="footer"> 
-				<a href="#pageMainMenu" 
-					class="ui-btn ui-btn-inline ui-mini" 
-					id="btnLogin" data-role="button" data-transition="fade"/>LOGIN</a>
-		</div>
-	</section> -->
 
 
 
@@ -68,6 +48,7 @@
 			FullScreenApp();
 		}
 
+		/* This function makes the homepage full screen */
 		function FullScreenApp () {
 			var deviceHeight = window.innerHeight;
 			var contentHeight;
