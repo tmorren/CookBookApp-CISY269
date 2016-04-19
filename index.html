@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CookBook App</title>
+	<!-- 3 things needed for jquery mobile -->
+	<link rel="stylesheet" href="scripts/jquery.mobile-1.4.5.css" />
+	<script src="scripts/jquery-1.12.2.js" type="text/javascript"></script>
+	<script src="scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+	<!-- Login Page -->
+	<section id="pageLogin" data-role="page">	
+		<div class="ui-content" role="main" id="content">
+			<div id="sectionLoginForm">
+				<h1>RVCC Parking</h1>
+
+				<label for="username">Username:</label>
+	        	<input type="text" name="username" id="username" class="ui-input-text">
+				<label for="password">Password:</label>
+	        	<input type="text" name="password" id="password" class="ui-input-text">
+        	</div>
+		</div>
+	</section>
+<!--
+	<section id="pageLogin" data-role="page">	
+		<div data-role="header" id="header"> 
+			<h2>CookBook</h2>
+		</div>
+		<div class="ui-content" role="main" id="content">
+			<div id="sectionLoginForm">
+				<h1>RVCC Parking</h1>
+
+				<label for="username">Username:</label>
+	        	<input type="text" name="username" id="username" class="ui-input-text">
+				<label for="password">Password:</label>
+	        	<input type="text" name="password" id="password" class="ui-input-text">
+        	</div>
+		</div>
+		<div data-role="footer" id="footer"> 
+				<a href="#pageMainMenu" 
+					class="ui-btn ui-btn-inline ui-mini" 
+					id="btnLogin" data-role="button" data-transition="fade"/>LOGIN</a>
+		</div>
+	</section> -->
+
+
+
+
+	<!-- Main Menu -->
+	<section data-role="page" id="pageMainMenu">	
+		<div data-role="header"> 
+			<h2>CookBook</h2>
+		</div>
+		<div class="ui-content" role="main">
+			<p><h1>RVCC Parking</h1></p>
+		</div>
+		<div data-role="footer"> 
+				<a href="#" class="ui-btn ui-btn-inline ui-mini"
+					id="btnLogin2" data-role="button" data-transition="fade"/>LOGIN</a>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		window.onload = function () {
+			FullScreenApp();
+		}
+
+		function FullScreenApp () {
+			var deviceHeight = window.innerHeight;
+			var contentHeight;
+
+			contentHeight = deviceHeight - 32;
+
+			document.getElementById('content').setAttribute("style", "height:" + contentHeight + "px");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/*=====================
+		Main CSS
+======================*/
+
+/*====================
+		Login Page
+=====================*/
+#pageLogin .ui-content{
+	height: 100%;
+	background: linear-gradient( 
+		rgba(0, 0, 0, 0.5), 
+		rgba(0, 0, 0, 0.5) ), 
+		url("../img/login-page-bg.jpg");
+}
+
+#sectionLoginForm{
+	position: relative;
+	top: 20%;
+}
