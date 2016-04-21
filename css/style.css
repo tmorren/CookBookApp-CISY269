@@ -1,7 +1,16 @@
 /*=====================
 		Main CSS
 ======================*/
+	.categoryList > li{
+		display: inline-block;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		margin-top: .5em;
+		padding: .2em;
 
+		background-color: #F6F6F6; ;
+		color: black;
+	}
 
 /*====================
 		Login Page
@@ -26,6 +35,7 @@
 	.recipeRow{
 		width: 100%;
 	}
+
 
 	/* For Small Devices (Phones) */
 		.recipeContainer{
@@ -59,20 +69,14 @@
 			padding-left: 0;
 		}
 
-		.recipeContainer li{
-			display: inline-block;
-			border: 1px solid #ddd;
-			border-radius: 3px;
-			margin-top: .5em;
-			padding: .2em;
-
-			background-color: #F6F6F6; ;
-			color: black;
-		}
-
 		.recipeContainer h4{
 			margin-top: .5em;
 			margin-bottom: .5em; 
+		}
+
+		.recipeCategories{
+			padding-left: 1em;
+			padding-right:  1em;
 		}
 
 	/* For Medium Devices (Tablets) */
@@ -87,6 +91,10 @@
 			float: right;
 		}
 
+		.recipeCategories{
+			padding-top: 2.5em;
+		}
+
 	}
 
 /*===================
@@ -94,8 +102,54 @@
 ====================*/
 	.recipePageCard{
 		box-sizing: border-box;
-		width: 100%;
-		padding: 1em;
 		margin-bottom: 1em;
+		padding-left: 1em;
+		padding-right: 1em;
 		background-color: white;
+		overflow: hidden;
+	}
+
+	.recipePageFirst.recipePageCard{
+		padding: 0;
+	}
+
+	.recipeMainInfo{
+		padding: 0 1em 0 1em;
+	}
+
+	.recipePage ul{
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.instructionsList{
+		padding-left: 1em;
+	}
+
+	.instructionsList li{
+		margin-bottom: 1em;
+	}
+	/* For Small Devices (Phones) */
+	.recipeImage img{
+		width: 100%; 
+	
+	}
+
+	/* For Medium Devices (Tablets) */
+	@media (min-width: 500px){
+		.recipeImage{
+			display: inline-block; 
+			float: left;
+		}
+
+		.recipeImage img{
+			width: 10em; 
+			height: 10em;
+		}
+
+		.recipeMainInfo{
+			display: inline-block; 
+			padding-left: 1em; 
+			float:left;
+		}
 	}

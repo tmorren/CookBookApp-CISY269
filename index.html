@@ -70,7 +70,7 @@
 					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
 						<h4>Cheeseburger Sliders</h4>
-						<ul>
+						<ul class="categoryList">
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
@@ -84,7 +84,7 @@
 					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
 						<h4>Cheeseburger Sliders</h4>
-						<ul>
+						<ul class="categoryList">
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
@@ -102,7 +102,7 @@
 					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
 						<h4>Cheeseburger Sliders</h4>
-						<ul>
+						<ul class="categoryList">
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
@@ -116,7 +116,7 @@
 					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
 						<h4>Cheeseburger Sliders</h4>
-						<ul>
+						<ul class="categoryList">
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
@@ -138,26 +138,58 @@
 	<!-- ========================
 	  Cheeseburger Sliders Recipe
 	============================= -->
-	<section id="burgerRecipe" data-role="page">
+	<section id="burgerRecipe" class="recipePage" data-role="page">
 		<div data-role="header"> 
 			<h2>CookBook</h2>
 		</div>	
 		<div class="ui-content" role="main" id="content">
-			<div class="recipePageCard">
-				<h1>Cheeseburger Sliders</h1>
+			<div class="recipePageCard recipePageFirst">
+				<div class="recipeImage">
+					<img src="img/beef-sliders.jpg">
+				</div>
+				<div class="recipeMainInfo">
+					<h2>Cheeseburger Sliders</h2>
+					<ul>
+						<li><b>Recipe By:</b> Minnesota_Girl</li>
+						<li><b>Time:</b> 50m</li>
+						<li><b>Servings:</b> 24</li>
+					</ul>
+				</div>
+				<div class="recipeCategories">
+					<ul class="categoryList">
+							<li>US Recipes</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>BBQ &amp; Grilling</li>
+					</ul>
+				</div>
         	</div>
 
         	<div class="recipePageCard">
-				<h1>Ingrediants</h1>
+				<h1>Ingredients</h1>
+				<ul class="ingredientList">
+					<li>2 pounds ground beek</li>
+					<li>1.25 ounce envelope soup mix</li>
+					<li>1/2 cup mayonnaise</li>
+					<li>2 cups shredded cheddar cheese</li>
+					<li>24 dinner rolls</li>
+					<li>1/2 cup sliced pickles</li>
+				</ul>
         	</div>
 
         	<div class="recipePageCard">
 				<h1>Instructions</h1>
+				<ol class="instructionsList">
+					<li>Preheat an oven to 350 degrees F (175 degrees C). Cover a baking sheet with aluminum foil and spray with cooking spray.</li>
+					<li>Mix together the ground beef and onion soup mix in a large skillet; cook and stir over medium-high heat until the beef is crumbly, evenly browned, and no longer pink. Drain and discard any excess grease. Remove from heat. Stir the mayonnaise and Cheddar cheese into the ground beef mixture.</li>
+					<li>Lay the bottoms of the dinner rolls on the prepared baking sheet. Spread the cheese and beef mixture on the bottom half of each roll. Replace the tops. Cover with another sheet of aluminum foil sprayed with cooking spray.</li>
+					<li>Bake in the preheated oven until the burgers are heated through and cheese melts, about 30 minutes. Serve with sliced pickles.</li>
+				</ol>
         	</div>
 		</div>
 		<div data-role="footer"> 
-				<a href="#pageLogin" class="ui-btn ui-btn-inline ui-mini"
-					id="btnLogin2" data-role="button" data-transition="fade"/>LOGOUT</a>
+				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back"
+					data-role="button" data-transition="fade"/>BACK</a>
 		</div>
 	</section>
 
