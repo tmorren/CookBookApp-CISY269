@@ -2,76 +2,100 @@
 		Main CSS
 ======================*/
 
+
 /*====================
 		Login Page
 =====================*/
-#pageLogin .ui-content{
-	height: 100%;
-	background: linear-gradient( 
-		rgba(0, 0, 0, 0.5), 
-		rgba(0, 0, 0, 0.5) ), 
-		url("../img/login-page-bg.jpg");
-	color: white;
-}
+	#pageLogin .ui-content{
+		height: 100%;
+		background: linear-gradient( 
+			rgba(0, 0, 0, 0.5), 
+			rgba(0, 0, 0, 0.5) ), 
+			url("../img/login-page-bg.jpg");
+		color: white;
+	}
 
-#sectionLoginForm{
-	position: relative;
-	top: 15%;
-}
+	#sectionLoginForm{
+		position: relative;
+		top: 15%;
+	}
 
 /*===================
 	Recipe Boxes
 ====================*/
+	.recipeRow{
+		width: 100%;
+	}
 
-/* For Small Devices (Phones) */
-.recipeContainer{
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1em;
+	/* For Small Devices (Phones) */
+		.recipeContainer{
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1em;
 
-	background-color: white;
+			background-color: white;
 
-}
+		}
 
-.recipeThumbnail{
-	float: left;
-	margin: 0;
-	/*background-image: url("../img/beef-sliders.jpg");
-	background-position: center;
-	background-size: 100% auto;*/
-	overflow: hidden;
-	height: 8em;
-	width: 100%;
-}
+		.recipeThumbnail{
+			float: left;
+			margin: 0;
+			overflow: hidden;
+			height: 8em;
+			width: 100%;
+		}
 
-.recipeThumbnail img{
-	width: 100%;
-}
+		.recipeThumbnail img{
+			width: 100%;
+		}
 
-.recipeCardInfo{
-	clear: both;
-	padding: .5em;
-}
+		.recipeCardInfo{
+			clear: both;
+			padding: .5em;
+		}
 
-.recipeContainer ul{
-	padding-left: 0;
-}
+		.recipeContainer ul{
+			padding-left: 0;
+		}
 
-.recipeContainer li{
-	display: inline-block;
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	margin-top: .5em;
-	padding: .2em;
+		.recipeContainer li{
+			display: inline-block;
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			margin-top: .5em;
+			padding: .2em;
 
-	background-color: #F6F6F6; ;
-	color: black;
-}
+			background-color: #F6F6F6; ;
+			color: black;
+		}
 
-.recipeContainer h4{
-	margin-top: .5em;
-	margin-bottom: .5em; 
-}
+		.recipeContainer h4{
+			margin-top: .5em;
+			margin-bottom: .5em; 
+		}
 
-/* For Medium Devices (Tablets) */
+	/* For Medium Devices (Tablets) */
+	@media (min-width: 500px){
+		.recipeContainer:nth-child(1){
+			width: 47%;
+			float: left;
+		}
+
+		.recipeContainer:nth-child(2){
+			width: 47%;
+			float: right;
+		}
+
+	}
+
+/*===================
+	Recipe Page
+====================*/
+	.recipePageCard{
+		box-sizing: border-box;
+		width: 100%;
+		padding: 1em;
+		margin-bottom: 1em;
+		background-color: white;
+	}
