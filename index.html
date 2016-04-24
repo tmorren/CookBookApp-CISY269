@@ -39,15 +39,15 @@
 			Main Menu Page
 	============================= -->
 	<section data-role="page" id="pageMainMenu">	
-		<div data-role="header"> 
+		<div data-role="header" data-position="fixed">
 			<h2>CookBook</h2>
 		</div>
 		<div class="ui-content" role="main">
 			<h1>Select an Option</h1>
 
-			<a class="ui-btn" href="#pageViewRecipes">View Recipes</a>
-			<a class="ui-btn" href="#pageMainMenu">Edit Recipes</a>
-			<a class="ui-btn" href="#pageMainMenu">Delete Recipes</a>
+			<a class="ui-btn" href="#pageViewRecipes" data-transition="slide">View Recipes</a>
+			<a class="ui-btn" href="#pageEditRecipes" data-transition="slide">Add/Edit Recipes</a>
+			<a class="ui-btn" href="#deleteRecipePage" data-transition="slide">Delete Recipes</a>
 		</div>
 		<div data-role="footer"> 
 				<a href="#pageLogin" class="ui-btn ui-btn-inline ui-mini"
@@ -59,7 +59,8 @@
 		  View Recipes Page
 	============================= -->
 	<section data-role="page" id="pageViewRecipes">	
-		<div data-role="header"> 
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a>  
 			<h2>CookBook</h2>
 		</div>
 		<div class="ui-content" role="main">
@@ -74,9 +75,9 @@
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>BBQ &amp; Grilling</li>
+							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#burgerRecipe">View Details</a>
+						<a class="ui-btn" href="#burgerRecipe" data-transition="slide">View Details</a>
 					</div>
 				</div>
 
@@ -88,9 +89,9 @@
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>BBQ &amp; Grilling</li>
+							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu">View Details</a>
+						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">View Details</a>
 					</div>
 				</div>
 			</div>
@@ -106,9 +107,9 @@
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>BBQ &amp; Grilling</li>
+							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu">View Details</a>
+						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">View Details</a>
 					</div>
 				</div>
 
@@ -120,9 +121,9 @@
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>BBQ &amp; Grilling</li>
+							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu">View Details</a>
+						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">View Details</a>
 					</div>
 				</div>
 			</div>
@@ -131,15 +132,98 @@
 		</div>
 		<div data-role="footer"> 
 				<a href="#pageMainMenu" class="ui-btn ui-btn-inline ui-mini"
-					data-role="button"/>Back</a>
+					data-role="button" data-transition="slide" data-direction="reverse"/>Back</a>
 		</div>
 	</section>
 
 	<!-- ========================
-	  Cheeseburger Sliders Recipe
+		  Add/Edit Recipes Page
+	============================= -->
+	<section data-role="page" id="pageEditRecipes">	
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
+			<h2>CookBook</h2>
+		</div>
+		<div class="ui-content" role="main">
+			<a class="ui-btn" href="#editRecipe" data-transition="slide">Add New Recipe</a>
+			<!-- First row -->
+			<div class="recipeRow">
+				<!-- Cheeseburger Sliders -->
+				<div class="recipeContainer">
+					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeCardInfo">
+						<h4>Cheeseburger Sliders</h4>
+						<ul class="categoryList">
+							<li>US Recipes</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Meat &amp; Poultry</li>
+						</ul>
+						<a class="ui-btn" href="#editRecipe" data-transition="slide">Edit Recipe</a>
+					</div>
+				</div>
+
+				<div class="recipeContainer">
+					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeCardInfo">
+						<h4>Cheeseburger Sliders</h4>
+						<ul class="categoryList">
+							<li>US Recipes</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Meat &amp; Poultry</li>
+						</ul>
+						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">Edit Recipe</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Second row -->
+			<div class="recipeRow">
+				<!-- Cheeseburger Sliders -->
+				<div class="recipeContainer">
+					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeCardInfo">
+						<h4>Cheeseburger Sliders</h4>
+						<ul class="categoryList">
+							<li>US Recipes</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Meat &amp; Poultry</li>
+						</ul>
+						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">Edit Recipe</a>
+					</div>
+				</div>
+
+				<div class="recipeContainer">
+					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeCardInfo">
+						<h4>Cheeseburger Sliders</h4>
+						<ul class="categoryList">
+							<li>US Recipes</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Meat &amp; Poultry</li>
+						</ul>
+						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">Edit Recipe</a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div data-role="footer"> 
+				<a href="#pageMainMenu" class="ui-btn ui-btn-inline ui-mini"
+					data-role="button" data-transition="slide" data-direction="reverse" />Back</a>
+		</div>
+	</section>
+
+	<!-- ========================
+	  View Cheeseburger Sliders Recipe
 	============================= -->
 	<section id="burgerRecipe" class="recipePage" data-role="page">
-		<div data-role="header"> 
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
 			<h2>CookBook</h2>
 		</div>	
 		<div class="ui-content" role="main" id="content">
@@ -160,7 +244,7 @@
 							<li>US Recipes</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>BBQ &amp; Grilling</li>
+							<li>Meat &amp; Poultry</li>
 					</ul>
 				</div>
         	</div>
@@ -186,10 +270,115 @@
 					<li>Bake in the preheated oven until the burgers are heated through and cheese melts, about 30 minutes. Serve with sliced pickles.</li>
 				</ol>
         	</div>
+
+        	<a href="#" class="ui-btn ui-btn-inline ui-mini">Share</a>
+		</div>
+
+		<div data-role="footer"> 
+				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back"
+					data-role="button" />BACK</a>
+		</div>
+	</section>
+
+	<!-- ========================
+	  		Add/Edit Recipe
+	============================= -->
+	<section id="editRecipe" class="recipePage" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
+			<h2>CookBook</h2>
+		</div>	
+		<div class="ui-content" role="main" id="content">
+			<div class="recipePageCard">
+					<br>
+					<label for="recipename"><b>Recipe name:</b></label>
+        			<input type="text" name="recipename" id="recipename">
+        			<label for="recipeby"><b>Recipe by:</b></label>
+        			<input type="text" name="recipeby" id="recipeby">
+					<a class="ui-btn" href="#">Upload Image</a>
+
+
+					<fieldset data-role="controlgroup">
+				        <legend>Categories</legend>
+				          	<label for="breakfast">Breakfast</label>
+				          	<input type="checkbox" name="foodcategory" id="breakfast" value="breakfast">
+				          	<label for="lunch">Lunch</label>
+				          	<input type="checkbox" name="foodcategory" id="lunch" value="lunch">
+				          	<label for="dinner">Dinner</label>
+				         	<input type="checkbox" name="foodcategory" id="dinner" value="dinner">
+				         	<label for="usrecipes">US Recipes</label>
+				         	<input type="checkbox" name="foodcategory" id="usrecipes" value="usrecipes">
+				         	<label for="worldcuisine">World Cuisine</label>
+				         	<input type="checkbox" name="foodcategory" id="worldcuisine" value="worldcuisine">
+				         	<label for="meat">Meat &amp; Poultry</label>
+				         	<input type="checkbox" name="foodcategory" id="meat" value="meat">
+				         	<label for="pasta">Pasta &amp; Noodles</label>
+				         	<input type="checkbox" name="foodcategory" id="pasta" value="pasta">		
+				         	<label for="healthy">Healthy</label>
+				         	<input type="checkbox" name="foodcategory" id="healthy" value="healthy">			
+				     </fieldset>
+			
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Ingredients</h1>
+				<label for="ingrediantOne"><b>Ingredient One:</b></label>
+        		<input type="text" name="ingredients" id="ingredientOne">
+        		<label for="ingrediantTwo"><b>Ingredient Two:</b></label>
+        		<input type="text" name="ingredients" id="ingredientTwo">
+        		<label for="ingrediantThree"><b>Ingredient Three:</b></label>
+        		<input type="text" name="ingredients" id="ingredientThree">
+
+        		<a href="#" data-role="button" data-icon="plus" data-iconpos="notext" style="display: block; margin-left: auto; margin-right: auto;"></a>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Instructions</h1>
+				<textarea name="instructions" id="instructions"></textarea>
+        	</div>
+
+        	<!-- Popup Window-->
+        	<a class="ui-btn" data-rel="popup" data-position-to="window" href="#saveChanges">Save Changes</a>
+        	<a class="ui-btn" data-rel="popup" data-position-to="window" href="#deleteRecipePopup">Delete Recipe</a>
+
+        	<div data-role="popup" id="saveChanges" class="ui-content" data-overlay-theme="b">
+		      	<p>Are you sure you want to save your change?</p>
+		      	<a href="#pageMainMenu" class="ui-btn">Yes</a>
+		      	<a href="#editRecipe" class="ui-btn">No</a>
+		    </div>
+
+		    <div data-role="popup" id="deleteRecipePopup" class="ui-content" data-overlay-theme="b">
+		      	<p>Are you sure you want to delete this recipe?</p>
+		      	<a href="#pageMainMenu" class="ui-btn">Yes</a>
+		      	<a href="#editRecipe" class="ui-btn">No</a>
+		    </div>
 		</div>
 		<div data-role="footer"> 
 				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back"
-					data-role="button" data-transition="fade"/>BACK</a>
+					data-role="button" />BACK</a>
+		</div>
+	</section>
+
+	<!-- ========================
+	  		Delete Recipes
+	============================= -->
+	<section id="deleteRecipePage" class="recipePage" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
+			<h2>CookBook</h2>
+		</div>	
+		<div class="ui-content" role="main" id="content">
+			<h1>Select Recipes to Delete</h1>
+
+			<fieldset data-role="controlgroup">
+		  		<label for="sliders">Cheeseburger Sliders</label>
+	          	<input type="checkbox" name="deleterecipes" id="sliders" value="sliders"/>		
+		     </fieldset>
+	
+		</div>
+		<div data-role="footer"> 
+				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back"
+					data-role="button" data-transition="slide" data-direction="reverse"/>BACK</a>
 		</div>
 	</section>
 
