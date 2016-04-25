@@ -5,6 +5,7 @@
 	<!-- 3 things needed for jquery mobile -->
 	<link rel="stylesheet" href="scripts/jquery.mobile-1.4.5.css" />
 	<script src="scripts/jquery-1.12.2.js" type="text/javascript"></script>
+	<script src="scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
 	<script>
 	    $(document).bind('mobileinit',function(){
 	        $.mobile.changePage.defaults.changeHash = false;
@@ -12,7 +13,6 @@
 	        $.mobile.pushStateEnabled = false;
 	    });
 	</script> 
-	<script src="scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<meta name="viewport" content="width=device-width" />
 </head>
@@ -29,7 +29,7 @@
 				<label for="username">Username:</label>
 	        	<input type="text" name="username" id="username" class="ui-input-text">
 				<label for="password">Password:</label>
-	        	<input type="text" name="password" id="password" class="ui-input-text">
+	        	<input type="password" name="password" id="password" class="ui-input-text">
 	        	<a class="ui-btn" href="#pageMainMenu">Login</a>
         	</div>
 		</div>
@@ -63,12 +63,37 @@
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a>  
 			<h2>CookBook</h2>
 		</div>
+
 		<div class="ui-content" role="main">
+			<!-- Filter -->
+			<div data-role="collapsible">
+				<h1>Filter</h1>
+			 	<fieldset data-role="controlgroup">
+			          	<label for="breakfast">Breakfast</label>
+			          	<input type="checkbox" name="foodcategory" id="breakfast" value="breakfast">
+			          	<label for="lunch">Lunch</label>
+			          	<input type="checkbox" name="foodcategory" id="lunch" value="lunch">
+			          	<label for="dinner">Dinner</label>
+			         	<input type="checkbox" name="foodcategory" id="dinner" value="dinner">
+			         	<label for="usrecipes">US Recipes</label>
+			         	<input type="checkbox" name="foodcategory" id="usrecipes" value="usrecipes">
+			         	<label for="worldcuisine">World Cuisine</label>
+			         	<input type="checkbox" name="foodcategory" id="worldcuisine" value="worldcuisine">
+			         	<label for="meat">Meat &amp; Poultry</label>
+			         	<input type="checkbox" name="foodcategory" id="meat" value="meat">
+			         	<label for="pasta">Pasta &amp; Noodles</label>
+			         	<input type="checkbox" name="foodcategory" id="pasta" value="pasta">		
+			         	<label for="healthy">Healthy</label>
+			         	<input type="checkbox" name="foodcategory" id="healthy" value="healthy">			
+			     </fieldset>
+			</div>
+
 			<!-- First row -->
 			<div class="recipeRow">
 				<!-- Cheeseburger Sliders -->
 				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle">
+					</div> 
 					<div class="recipeCardInfo">
 						<h4>Cheeseburger Sliders</h4>
 						<ul class="categoryList">
@@ -82,16 +107,16 @@
 				</div>
 
 				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeThumbnail"><img src="img/pasta.jpeg" align="middle"></div> 
 					<div class="recipeCardInfo">
-						<h4>Cheeseburger Sliders</h4>
+						<h4>Tomato &amp; Garlic Pasta</h4>
 						<ul class="categoryList">
-							<li>US Recipes</li>
+							<li>World Cuisine	</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>Meat &amp; Poultry</li>
+							<li>Pasta &amp; Noodles</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">View Details</a>
+						<a class="ui-btn" href="#pastaRecipe" data-transition="slide">View Details</a>
 					</div>
 				</div>
 			</div>
@@ -145,7 +170,31 @@
 			<h2>CookBook</h2>
 		</div>
 		<div class="ui-content" role="main">
+			<!-- Filter -->
+			<div data-role="collapsible">
+				<h1>Filter</h1>
+			 	<fieldset data-role="controlgroup">
+			          	<label for="breakfast">Breakfast</label>
+			          	<input type="checkbox" name="foodcategory" id="breakfast" value="breakfast">
+			          	<label for="lunch">Lunch</label>
+			          	<input type="checkbox" name="foodcategory" id="lunch" value="lunch">
+			          	<label for="dinner">Dinner</label>
+			         	<input type="checkbox" name="foodcategory" id="dinner" value="dinner">
+			         	<label for="usrecipes">US Recipes</label>
+			         	<input type="checkbox" name="foodcategory" id="usrecipes" value="usrecipes">
+			         	<label for="worldcuisine">World Cuisine</label>
+			         	<input type="checkbox" name="foodcategory" id="worldcuisine" value="worldcuisine">
+			         	<label for="meat">Meat &amp; Poultry</label>
+			         	<input type="checkbox" name="foodcategory" id="meat" value="meat">
+			         	<label for="pasta">Pasta &amp; Noodles</label>
+			         	<input type="checkbox" name="foodcategory" id="pasta" value="pasta">		
+			         	<label for="healthy">Healthy</label>
+			         	<input type="checkbox" name="foodcategory" id="healthy" value="healthy">			
+			     </fieldset>
+			</div>
+			
 			<a class="ui-btn" href="#editRecipe" data-transition="slide">Add New Recipe</a>
+
 			<!-- First row -->
 			<div class="recipeRow">
 				<!-- Cheeseburger Sliders -->
@@ -164,16 +213,16 @@
 				</div>
 
 				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeThumbnail"><img src="img/pasta.jpeg" align="middle"></div> 
 					<div class="recipeCardInfo">
-						<h4>Cheeseburger Sliders</h4>
+						<h4>Tomato &amp; Garlic Pasta</h4>
 						<ul class="categoryList">
-							<li>US Recipes</li>
+							<li>World Cuisine	</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
-							<li>Meat &amp; Poultry</li>
+							<li>Pasta &amp; Noodles</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">Edit Recipe</a>
+						<a class="ui-btn" href="#editRecipe" data-transition="slide">Edit Recipe</a>
 					</div>
 				</div>
 			</div>
@@ -252,7 +301,7 @@
         	<div class="recipePageCard">
 				<h1>Ingredients</h1>
 				<ul class="ingredientList">
-					<li>2 pounds ground beek</li>
+					<li>2 pounds ground beef</li>
 					<li>1.25 ounce envelope soup mix</li>
 					<li>1/2 cup mayonnaise</li>
 					<li>2 cups shredded cheddar cheese</li>
@@ -277,6 +326,67 @@
 		<div data-role="footer"> 
 				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back"
 					data-role="button" />BACK</a>
+		</div>
+	</section>
+
+	<!-- ========================
+	  		View Pasta Recipe
+	============================= -->
+	<section id="pastaRecipe" class="recipePage" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
+			<h2>CookBook</h2>
+		</div>	
+		<div class="ui-content" role="main" id="content">
+			<div class="recipePageCard recipePageFirst">
+				<div class="recipeImage">
+					<img src="img/pasta.jpeg">
+				</div>
+				<div class="recipeMainInfo">
+					<h2>Tomato &amp; Garlic Pasta</h2>
+					<ul>
+						<li><b>Recipe By:</b>Alma-Lou</li>
+						<li><b>Time:</b> 40m</li>
+						<li><b>Servings:</b>4</li>
+					</ul>
+				</div>
+				<div class="recipeCategories">
+					<ul class="categoryList">
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Pasta &amp; Noodles</li>
+					</ul>
+				</div>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Ingredients</h1>
+				<ul class="ingredientList">
+					<li>1 (8 ounce) package angel hair pasta</li>
+					<li>2 pounds tomatoes</li>
+					<li>4 cloves crushed garlic</li>
+					<li>1 tablespoon olive oil</li>
+					<li>1 tablespoon chopped fresh basil</li>
+					<li>1 tablespoon tomato paste</li>
+					<li>1/4 cup grated Parmesan cheese</li>
+				</ul>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Instructions</h1>
+				<ol class="instructionsList">
+					<li>Place tomatoes in a kettle, and cover with cold water. Bring just to the boil. Pour off water, and cover again with cold water. Peel. Cut into small pieces.</li>
+					<li>Cook the pasta in a large pot of boiling salted water until al dente.</li>
+					<li>In a large skillet or saute pan, saute the garlic in enough olive oil to cover the bottom of the pan. The garlic should just become opaque, not brown. Stir in the tomato paste. Immediately stir in the tomatoes, and salt and pepper. Reduce heat, and simmer until the pasta is ready; add the basil.</li>
+					<li>Drain the pasta, but do not rinse in cold water. Toss with a couple of tablespoons of olive oil, and then mix into the sauce. Reduce the heat as low as possible. Keep warm, uncovered, for about 10 minutes when it is ready to serve. Garnish generously with fresh Parmesan cheese.</li>
+				</ol>
+        	</div>
+
+        	<a href="#" class="ui-btn ui-btn-inline ui-mini">Share</a>
+		</div>
+
+		<div data-role="footer"> 
+				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back" data-role="button" />BACK</a>
 		</div>
 	</section>
 
@@ -322,14 +432,16 @@
 
         	<div class="recipePageCard">
 				<h1>Ingredients</h1>
-				<label for="ingrediantOne"><b>Ingredient One:</b></label>
-        		<input type="text" name="ingredients" id="ingredientOne">
-        		<label for="ingrediantTwo"><b>Ingredient Two:</b></label>
-        		<input type="text" name="ingredients" id="ingredientTwo">
-        		<label for="ingrediantThree"><b>Ingredient Three:</b></label>
-        		<input type="text" name="ingredients" id="ingredientThree">
+				<div id="ingredients">
+					<label><b>Ingredient:</b></label>
+	        		<input type="text" name="ingredients">
+	        		<label><b>Ingredient:</b></label>
+	        		<input type="text" name="ingredients">
+	        		<label><b>Ingredient:</b></label>
+	        		<input type="text" name="ingredients">
+        		</div>
 
-        		<a href="#" data-role="button" data-icon="plus" data-iconpos="notext" style="display: block; margin-left: auto; margin-right: auto;"></a>
+        		<a href="#" data-role="button" data-icon="plus" data-iconpos="notext" style="display: block; margin-left: auto; margin-right: auto;" id="btnAddIngredient"></a>
         	</div>
 
         	<div class="recipePageCard">
@@ -372,8 +484,19 @@
 
 			<fieldset data-role="controlgroup">
 		  		<label for="sliders">Cheeseburger Sliders</label>
-	          	<input type="checkbox" name="deleterecipes" id="sliders" value="sliders"/>		
+	          	<input type="checkbox" name="deleterecipes" id="sliders" value="sliders"/>
+	          	<label for="tompasta">Tomato &amp; Garlic Pasta</label>
+	          	<input type="checkbox" name="deleterecipes" id="tompasta" value="tompasta"/>		
 		     </fieldset>
+
+		     <a class="ui-btn" data-rel="popup" data-position-to="window" href="#deleteSelected">Delete Recipe</a>
+
+		     <!-- Popup Delete Verification-->
+		     <div data-role="popup" id="deleteSelected" class="ui-content" data-overlay-theme="b">
+		      	<p>Are you sure you want to delete the selected recipes?</p>
+		      	<a href="#pageMainMenu" class="ui-btn">Yes</a>
+		      	<a href="#deleteRecipePage" class="ui-btn">No</a>
+		    </div>
 	
 		</div>
 		<div data-role="footer"> 
@@ -382,8 +505,16 @@
 		</div>
 	</section>
 
+	<!-- ========================
+	  	JavaScript Functions
+	============================= -->
 	<script type="text/javascript">
+		var $ = function (id) {
+			return document.getElementById(id);
+		}
+
 		window.onload = function () {
+			$('btnAddIngredient').onclick = AddIngredient;
 			FullScreenApp();
 		}
 
@@ -395,6 +526,15 @@
 			contentHeight = deviceHeight - 32;
 
 			document.getElementById('content').setAttribute("style", "height:" + contentHeight + "px");
+		}
+
+		/* Add anoter inputbox for ingredients */
+		function AddIngredient () {
+			var ingredients = $('ingredients');
+
+			ingredients.innerHTML += '<label><b>Ingredient:</b></label>' 
+								  + '<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">'
+								  + '<input class="ui-input-text" type="text" name="ingredients"></div>';
 		}
 	</script>
 </body>

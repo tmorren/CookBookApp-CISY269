@@ -12,6 +12,10 @@
 		color: black;
 	}
 
+	.ui-content{
+		background-color: #e0e0e0;
+	}
+
 /*====================
 		Login Page
 =====================*/
@@ -21,6 +25,7 @@
 			rgba(0, 0, 0, 0.5), 
 			rgba(0, 0, 0, 0.5) ), 
 			url("../img/login-page-bg.jpg");
+		background-size: cover;
 		color: white;
 	}
 
@@ -34,6 +39,7 @@
 ====================*/
 	.recipeRow{
 		width: 100%;
+		clear: both;
 	}
 
 
