@@ -192,7 +192,7 @@
 			         	<input type="checkbox" name="foodcategory" id="healthy" value="healthy">			
 			     </fieldset>
 			</div>
-			
+
 			<a class="ui-btn" href="#editRecipe" data-transition="slide">Add New Recipe</a>
 
 			<!-- First row -->
@@ -489,7 +489,7 @@
 	          	<input type="checkbox" name="deleterecipes" id="tompasta" value="tompasta"/>		
 		     </fieldset>
 
-		     <a class="ui-btn" data-rel="popup" data-position-to="window" href="#deleteSelected">Delete Recipe</a>
+		     <a class="ui-btn" data-rel="popup" data-position-to="window" href="#deleteSelected">Delete Recipes</a>
 
 		     <!-- Popup Delete Verification-->
 		     <div data-role="popup" id="deleteSelected" class="ui-content" data-overlay-theme="b">
@@ -527,6 +527,16 @@
 
 			document.getElementById('content').setAttribute("style", "height:" + contentHeight + "px");
 		}
+
+		window.addEventListener("orientationchange", function() {
+			// Announce the new orientation number
+			var deviceHeight = window.innerHeight;
+			var contentHeight;
+
+			contentHeight = deviceHeight - 32;
+
+			document.getElementById('content').setAttribute("style", "height:" + contentHeight + "px");
+		}, false);
 
 		/* Add anoter inputbox for ingredients */
 		function AddIngredient () {
