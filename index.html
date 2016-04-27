@@ -5,7 +5,6 @@
 	<!-- 3 things needed for jquery mobile -->
 	<link rel="stylesheet" href="scripts/jquery.mobile-1.4.5.css" />
 	<script src="scripts/jquery-1.12.2.js" type="text/javascript"></script>
-	<script src="scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
 	<script>
 	    $(document).bind('mobileinit',function(){
 	        $.mobile.changePage.defaults.changeHash = false;
@@ -13,6 +12,7 @@
 	        $.mobile.pushStateEnabled = false;
 	    });
 	</script> 
+	<script src="scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<meta name="viewport" content="width=device-width" />
 </head>
@@ -61,7 +61,7 @@
 	<section data-role="page" id="pageViewRecipes">	
 		<div data-role="header" data-position="fixed">
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a>  
-			<h2>CookBook</h2>
+			<h2>View Recipes</h2>
 		</div>
 
 		<div class="ui-content" role="main">
@@ -69,29 +69,30 @@
 			<div data-role="collapsible">
 				<h1>Filter</h1>
 			 	<fieldset data-role="controlgroup">
-			          	<label for="breakfast">Breakfast</label>
-			          	<input type="checkbox" name="foodcategory" id="breakfast" value="breakfast">
-			          	<label for="lunch">Lunch</label>
-			          	<input type="checkbox" name="foodcategory" id="lunch" value="lunch">
-			          	<label for="dinner">Dinner</label>
-			         	<input type="checkbox" name="foodcategory" id="dinner" value="dinner">
-			         	<label for="usrecipes">US Recipes</label>
-			         	<input type="checkbox" name="foodcategory" id="usrecipes" value="usrecipes">
-			         	<label for="worldcuisine">World Cuisine</label>
-			         	<input type="checkbox" name="foodcategory" id="worldcuisine" value="worldcuisine">
-			         	<label for="meat">Meat &amp; Poultry</label>
-			         	<input type="checkbox" name="foodcategory" id="meat" value="meat">
-			         	<label for="pasta">Pasta &amp; Noodles</label>
-			         	<input type="checkbox" name="foodcategory" id="pasta" value="pasta">		
-			         	<label for="healthy">Healthy</label>
-			         	<input type="checkbox" name="foodcategory" id="healthy" value="healthy">			
+			          	<label for="chkBreakfast">Breakfast</label>
+			          	<input type="checkbox" name="foodcategory" id="chkBreakfast" value="breakfast">
+			          	<label for="chkLunch">Lunch</label>
+			          	<input type="checkbox" name="foodcategory" id="chkLunch" value="lunch">
+			          	<label for="chkDinner">Dinner</label>
+			         	<input type="checkbox" name="foodcategory" id="chkDinner" value="dinner">
+			         	<label for="chkUSRecipes">US Recipes</label>
+			         	<input type="checkbox" name="foodcategory" id="chkUSRecipes" value="usrecipes">
+			         	<label for="chkWorldCuisine">World Cuisine</label>
+			         	<input type="checkbox" name="foodcategory" id="chkWorldCuisine" value="worldcuisine">
+			         	<label for="chkMeat">Meat &amp; Poultry</label>
+			         	<input type="checkbox" name="foodcategory" id="chkMeat" value="meat">
+			         	<label for="chkPasta">Pasta &amp; Noodles</label>
+			         	<input type="checkbox" name="foodcategory" id="chkPasta" value="pasta">		
+			         	<label for="chkHealthy">Healthy</label>
+			         	<input type="checkbox" name="foodcategory" id="chkHealthy" value="healthy">			
 			     </fieldset>
+
+			     <a class="ui-btn" href="#pageViewRecipes" data-transition="slide" id="btnFilter">Apply Filter</a>
 			</div>
 
 			<!-- First row -->
 			<div class="recipeRow">
-				<!-- Cheeseburger Sliders -->
-				<div class="recipeContainer">
+				<div class="recipeContainer" id="cardSliders">
 					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle">
 					</div> 
 					<div class="recipeCardInfo">
@@ -106,7 +107,7 @@
 					</div>
 				</div>
 
-				<div class="recipeContainer">
+				<div class="recipeContainer" id="cardPasta">
 					<div class="recipeThumbnail"><img src="img/pasta.jpeg" align="middle"></div> 
 					<div class="recipeCardInfo">
 						<h4>Tomato &amp; Garlic Pasta</h4>
@@ -122,32 +123,29 @@
 
 			<!-- Second row -->
 			<div class="recipeRow">
-				<!-- Cheeseburger Sliders -->
-				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+				<div class="recipeContainer" id="cardChicken">
+					<div class="recipeThumbnail"><img src="img/lemon-chicken.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
-						<h4>Cheeseburger Sliders</h4>
+						<h4>Grilled Lemon Chicken</h4>
 						<ul class="categoryList">
-							<li>US Recipes</li>
+							<li>Healthy</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
 							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">View Details</a>
+						<a class="ui-btn" href="#chickenRecipe" data-transition="slide">View Details</a>
 					</div>
 				</div>
 
-				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+				<div class="recipeContainer" id="cardFrenchToast">
+					<div class="recipeThumbnail"><img src="img/french-toast.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
-						<h4>Cheeseburger Sliders</h4>
+						<h4>Bannana Bread French Toast</h4>
 						<ul class="categoryList">
+							<li>Breakfast</li>
 							<li>US Recipes</li>
-							<li>Dinner</li>
-							<li>Lunch</li>
-							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">View Details</a>
+						<a class="ui-btn" href="#frenchToastRecipe" data-transition="slide">View Details</a>
 					</div>
 				</div>
 			</div>
@@ -166,31 +164,9 @@
 	<section data-role="page" id="pageEditRecipes">	
 		<div data-role="header" data-position="fixed">
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
-			<h2>CookBook</h2>
+			<h2>Add/Edit Recipe</h2>
 		</div>
 		<div class="ui-content" role="main">
-			<!-- Filter -->
-			<div data-role="collapsible">
-				<h1>Filter</h1>
-			 	<fieldset data-role="controlgroup">
-			          	<label for="breakfast">Breakfast</label>
-			          	<input type="checkbox" name="foodcategory" id="breakfast" value="breakfast">
-			          	<label for="lunch">Lunch</label>
-			          	<input type="checkbox" name="foodcategory" id="lunch" value="lunch">
-			          	<label for="dinner">Dinner</label>
-			         	<input type="checkbox" name="foodcategory" id="dinner" value="dinner">
-			         	<label for="usrecipes">US Recipes</label>
-			         	<input type="checkbox" name="foodcategory" id="usrecipes" value="usrecipes">
-			         	<label for="worldcuisine">World Cuisine</label>
-			         	<input type="checkbox" name="foodcategory" id="worldcuisine" value="worldcuisine">
-			         	<label for="meat">Meat &amp; Poultry</label>
-			         	<input type="checkbox" name="foodcategory" id="meat" value="meat">
-			         	<label for="pasta">Pasta &amp; Noodles</label>
-			         	<input type="checkbox" name="foodcategory" id="pasta" value="pasta">		
-			         	<label for="healthy">Healthy</label>
-			         	<input type="checkbox" name="foodcategory" id="healthy" value="healthy">			
-			     </fieldset>
-			</div>
 
 			<a class="ui-btn" href="#editRecipe" data-transition="slide">Add New Recipe</a>
 
@@ -228,32 +204,30 @@
 
 			<!-- Second row -->
 			<div class="recipeRow">
-				<!-- Cheeseburger Sliders -->
+				<!-- Lemon Chicken -->
 				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeThumbnail"><img src="img/lemon-chicken.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
-						<h4>Cheeseburger Sliders</h4>
+						<h4>Grilled Lemon Chicken</h4>
 						<ul class="categoryList">
-							<li>US Recipes</li>
+							<li>Healthy</li>
 							<li>Dinner</li>
 							<li>Lunch</li>
 							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">Edit Recipe</a>
+						<a class="ui-btn" href="#editRecipe" data-transition="slide">Edit Recipe</a>
 					</div>
 				</div>
 
 				<div class="recipeContainer">
-					<div class="recipeThumbnail"><img src="img/beef-sliders.jpg" align="middle"></div> 
+					<div class="recipeThumbnail"><img src="img/french-toast.jpg" align="middle"></div> 
 					<div class="recipeCardInfo">
-						<h4>Cheeseburger Sliders</h4>
+						<h4>Bannana Bread French Toast</h4>
 						<ul class="categoryList">
+							<li>Breakfast</li>
 							<li>US Recipes</li>
-							<li>Dinner</li>
-							<li>Lunch</li>
-							<li>Meat &amp; Poultry</li>
 						</ul>
-						<a class="ui-btn" href="#pageMainMenu" data-transition="slide">Edit Recipe</a>
+						<a class="ui-btn" href="#editRecipe" data-transition="slide">Edit Recipe</a>
 					</div>
 				</div>
 			</div>
@@ -272,7 +246,7 @@
 	<section id="burgerRecipe" class="recipePage" data-role="page">
 		<div data-role="header" data-position="fixed">
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
-			<h2>CookBook</h2>
+			<h2>Recipe</h2>
 		</div>	
 		<div class="ui-content" role="main" id="content">
 			<div class="recipePageCard recipePageFirst">
@@ -334,7 +308,7 @@
 	<section id="pastaRecipe" class="recipePage" data-role="page">
 		<div data-role="header" data-position="fixed">
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
-			<h2>CookBook</h2>
+			<h2>Recipe</h2>
 		</div>	
 		<div class="ui-content" role="main" id="content">
 			<div class="recipePageCard recipePageFirst">
@@ -390,12 +364,129 @@
 	</section>
 
 	<!-- ========================
+	  	View Lemon Chicken Recipe
+	============================= -->
+	<section id="chickenRecipe" class="recipePage" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
+			<h2>Recipe</h2>
+		</div>	
+		<div class="ui-content" role="main" id="content">
+			<div class="recipePageCard recipePageFirst">
+				<div class="recipeImage">
+					<img src="img/lemon-chicken.jpg">
+				</div>
+				<div class="recipeMainInfo">
+					<h2>Grilled Lemon Chicken</h2>
+					<ul>
+						<li><b>Recipe By:</b>Jenny English</li>
+						<li><b>Time:</b> 45m</li>
+						<li><b>Servings:</b>4</li>
+					</ul>
+				</div>
+				<div class="recipeCategories">
+					<ul class="categoryList">
+							<li>Healthy</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Meat &amp; Poultry</li>
+					</ul>
+				</div>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Ingredients</h1>
+				<ul class="ingredientList">
+					<li>4 skinless, boneless chicken breast halves</li>
+					<li>1/2 cup lemon juice</li>
+					<li>1/2 teaspooin onion powder</li>
+					<li>ground black pepper to taste</li>
+					<li>seasoning salt to taste</li>
+					<li>2 teaspoons dried parsley</li>
+				</ul>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Instructions</h1>
+				<ol class="instructionsList">
+					<li>Preheat an outdoor grill for medium-high heat, and lightly oil grate.</li>
+					<li>Dip chicken in lemon juice, and sprinkle with the onion powder, ground black pepper, seasoning salt and parsley. Discard any remaining lemon juice.</li>
+					<li>Cook on the prepared grill 10 to 15 minutes per side, or until no longer pink and juices run clear.</li>
+				</ol>
+        	</div>
+
+        	<a href="#" class="ui-btn ui-btn-inline ui-mini">Share</a>
+		</div>
+
+		<div data-role="footer"> 
+				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back" data-role="button" />BACK</a>
+		</div>
+	</section>
+
+	<!-- ========================
+	  	View French Toast Recipe
+	============================= -->
+	<section id="frenchToastRecipe" class="recipePage" data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
+			<h2>Recipe</h2>
+		</div>	
+		<div class="ui-content" role="main" id="content">
+			<div class="recipePageCard recipePageFirst">
+				<div class="recipeImage">
+					<img src="img/french-toast.jpg">
+				</div>
+				<div class="recipeMainInfo">
+					<h2>Banana Bread French Toast</h2>
+					<ul>
+						<li><b>Recipe By:</b>LBR8</li>
+						<li><b>Time:</b> 15m</li>
+						<li><b>Servings:</b>4</li>
+					</ul>
+				</div>
+				<div class="recipeCategories">
+					<ul class="categoryList">
+							<li>Breakfast</li>
+							<li>US Recipes</li>
+					</ul>
+				</div>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Ingredients</h1>
+				<ul class="ingredientList">
+					<li>3 eggs</li>
+					<li>3 tablespoons sweetened condensed milk</li>
+					<li>1 teaspoon vanilla extract</li>
+					<li>2 tablespoons butter</li>
+					<li>1 loaf banana bread</li>
+					<li>confectioners' sugar for dusting</li>
+				</ul>
+        	</div>
+
+        	<div class="recipePageCard">
+				<h1>Instructions</h1>
+				<ol class="instructionsList">
+					<li>In a shallow bowl, whisk together the eggs, sweetened condensed milk and vanilla with a fork. Set aside.</li>
+					<li>Melt butter in a large skillet over medium heat. Slice banana bread into 4 thick slices. Dip each slice into the egg mixture, then place in the hot pan. Cook on each side until golden brown. Dust with confectioners' sugar just before serving, if desired.</li>
+				</ol>
+        	</div>
+
+        	<a href="#" class="ui-btn ui-btn-inline ui-mini">Share</a>
+		</div>
+
+		<div data-role="footer"> 
+				<a href="#" class="ui-btn ui-btn-inline ui-mini" data-rel="back" data-role="button" />BACK</a>
+		</div>
+	</section>
+
+	<!-- ========================
 	  		Add/Edit Recipe
 	============================= -->
 	<section id="editRecipe" class="recipePage" data-role="page">
 		<div data-role="header" data-position="fixed">
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
-			<h2>CookBook</h2>
+			<h2>Edit Recipe</h2>
 		</div>	
 		<div class="ui-content" role="main" id="content">
 			<div class="recipePageCard">
@@ -476,16 +567,20 @@
 	<section id="deleteRecipePage" class="recipePage" data-role="page">
 		<div data-role="header" data-position="fixed">
 			<a href="#pageMainMenu" data-role="button" data-icon="home" data-iconpos="notext"></a> 
-			<h2>CookBook</h2>
+			<h2>Delete Recipe</h2>
 		</div>	
 		<div class="ui-content" role="main" id="content">
 			<h1>Select Recipes to Delete</h1>
 
 			<fieldset data-role="controlgroup">
-		  		<label for="sliders">Cheeseburger Sliders</label>
-	          	<input type="checkbox" name="deleterecipes" id="sliders" value="sliders"/>
-	          	<label for="tompasta">Tomato &amp; Garlic Pasta</label>
-	          	<input type="checkbox" name="deleterecipes" id="tompasta" value="tompasta"/>		
+		  		<label for="chkSliders" id="inputSliders">Cheeseburger Sliders</label>
+	          	<input type="checkbox" name="deleterecipes" id="chkSliders" value="sliders"/>
+	          	<label for="chkPasta" id="inputPasta">Tomato &amp; Garlic Pasta</label>
+	          	<input type="checkbox" name="deleterecipes" id="chkPasta" value="tompasta"/>
+	          	<label for="chkChicken" id="inputChicken">Grilled Lemon Chicken</label>
+	          	<input type="checkbox" name="deleterecipes" id="chkChicken" value="lemonchicken"/>	
+	          	<label for="chkFrenchToast" id="inputFrenchToast">Banana Bread French Toast</label>
+	          	<input type="checkbox" name="deleterecipes" id="chkFrenchToast" value="frenchtoast"/>	
 		     </fieldset>
 
 		     <a class="ui-btn" data-rel="popup" data-position-to="window" href="#deleteSelected">Delete Recipes</a>
@@ -493,7 +588,7 @@
 		     <!-- Popup Delete Verification-->
 		     <div data-role="popup" id="deleteSelected" class="ui-content" data-overlay-theme="b">
 		      	<p>Are you sure you want to delete the selected recipes?</p>
-		      	<a href="#pageMainMenu" class="ui-btn">Yes</a>
+		      	<a href="#deleteRecipePage" class="ui-btn" id="btnDeleteConfirm">Yes</a>
 		      	<a href="#deleteRecipePage" class="ui-btn">No</a>
 		    </div>
 	
@@ -514,6 +609,8 @@
 
 		window.onload = function () {
 			$('btnAddIngredient').onclick = AddIngredient;
+			$('btnDeleteConfirm').onclick = DeleteRecipe;
+			$('btnFilter').onclick = Filter;
 			FullScreenApp();
 		}
 
@@ -544,6 +641,90 @@
 			ingredients.innerHTML += '<label><b>Ingredient:</b></label>' 
 								  + '<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">'
 								  + '<input class="ui-input-text" type="text" name="ingredients"></div>';
+		}
+
+		/* Removes recipes from delete page*/
+		function DeleteRecipe () {
+			var sliders = $('chkSliders');
+			var pasta = $('chkPasta');
+			var chicken = $('chkChicken');
+			var frenchToast = $('chkFrenchToast');
+
+			if (sliders.checked) {
+				$('inputSliders').style.display = "none";
+				sliders.style.display = "none";
+			}
+
+			if (pasta.checked) {
+				$('inputPasta').style.display = "none";
+				pasta.style.display = "none";
+			}
+
+			if (chicken.checked) {
+				$('inputChicken').style.display = "none";
+				chicken.style.display = "none";
+			}
+
+			if (frenchToast.checked) {
+				$('inputFrenchToast').style.display = "none";
+				frenchToast.style.display = "none";
+			}
+		}
+
+		/* Recipe Filter */
+		function Filter(){
+			var  breakfast = $('chkBreakfast'),
+			     lunch = $('chkLunch'),
+			     dinner = $('chkDinner'),
+			     us = $('chkUSRecipes'),
+			     world = $('chkWorldCuisine'),
+			     meat = $('chkMeat'),
+			     pasta = $('chkPasta'),
+			     healthy = $('chkHealthy');
+
+			cardFrenchToast.style.display = "none";
+			cardSliders.style.display = "none";
+			cardPasta.style.display = "none";
+			cardChicken.style.display = "none";
+
+			if (breakfast.checked) {
+				cardFrenchToast.style.display = "block";
+			} 
+
+			if (lunch.checked) {
+				cardSliders.style.display = "block";
+				cardPasta.style.display = "block";
+				cardChicken.style.display = "block";
+			}
+
+			if (dinner.checked) {
+				cardSliders.style.display = "block";
+				cardPasta.style.display = "block";
+				cardChicken.style.display = "block";
+			}
+
+			if (us.checked) {
+				cardFrenchToast.style.display = "block";
+				cardSliders.style.display = "block";
+			}
+
+			if (world.checked) {
+				//none with world category
+			}
+
+			if (meat.checked) {
+				cardSliders.style.display = "block";
+				cardChicken.style.display = "block";
+			}
+
+			if (pasta.checked) {
+				cardPasta.style.display = "block";
+			}
+
+			if (healthy.checked) {
+				cardChicken.style.display = "block";
+			} 
+
 		}
 	</script>
 </body>
